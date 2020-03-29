@@ -1,0 +1,29 @@
+{
+  "name": "PWA_RVCE",
+  "short_name": "PWA",
+  "start_url": "/base.html",
+  "display": "standalone",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "orientation": "portrait-primary",
+  "description": "Simple docker using DJango",
+  "icons": 
+  [
+	{
+	    "src": "nature1.png",
+    	    "sizes": "512X512",
+	    "type": "image/png"
+ 
+	  },
+	{
+	    "src": "nature2.png",
+    	    "sizes": "192X192",
+	    "type": "image/png"
+ 
+	  }
+  ]
+
+
+}
+
+

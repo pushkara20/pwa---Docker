@@ -1,0 +1,43 @@
+<html>
+{% load static %}
+{% block 'content' %} {% endblock 'content' %}
+<head>
+
+<meta charset="UTF-8">
+<title>pwa</title>
+<meta name="theme-color" content="black"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="manifest" href="/static/app/manifest.json">
+<link rel="canonical" href="base.html"/>
+
+<script> 
+   console.log("Hello pwa");
+    if ('serviceWorker' in navigator) {
+        console.log("service worker function avilable");
+        window.addEventListener('load', function() {
+            console.log("Will the service worker register?");
+       navigator.serviceWorker.register("{% url 'sw.js' %}") .then(function(reg){
+           console.log("service worker rigistered");
+        
+        }).catch(function(err) {
+          console.log("service worker didn't", err)
+           console.log("err.message:", err.message)
+       });        
+    });
+
+
+    }
+    
+</script>
+   
+
+</head>
+<header>
+    <h1 style="text-align:center;" align="center">Progressive Web App</h1>
+</header>
+
+<body>
+	<center><h1>HELLO !!!</h1></center>
+</body>
+
+</html>
